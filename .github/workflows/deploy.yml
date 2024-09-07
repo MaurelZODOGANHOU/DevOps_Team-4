@@ -1,9 +1,9 @@
 name: Build Docker Image
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "dev" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "main", "dev" ]
 
 jobs:
 
@@ -13,8 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Set up Docker Buildx
-      uses: docker/setup-buildx-action@v2
+    #- name: Set up Docker Buildx
+    #  uses: docker/setup-buildx-action@v2
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag haroldhang/atut-devops-team4:${{ github.sha }}
     - name: Login to Docker Hub
