@@ -1,5 +1,4 @@
 fastapi[all]
 scikit-learn
-mysqlclient
 uvicorn
 joblib
