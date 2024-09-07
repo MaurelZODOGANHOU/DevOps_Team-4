@@ -23,7 +23,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: haroldhang/atut-devops-team4
+          images: maurelzodoganhou/atut-devops-team4
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
@@ -33,6 +33,6 @@ jobs:
           push: true
           no-cache : true
           tags: |
-            haroldhang/atut-devops-team4:${{ github.sha }}
-            haroldhang/atut-devops-team4:latest
+            maurelzodoganhou/atut-devops-team4:${{ github.sha }}
+            maurelzodoganhou/atut-devops-team4:latest
           labels: ${{ steps.meta.outputs.labels }}

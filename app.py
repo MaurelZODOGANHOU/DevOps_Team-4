@@ -14,7 +14,7 @@ model=joblib.load(joblib_in)
 
 @app.get('/')
 def index():
-    return {'message': 'Cars Recommender ML API for main 2'}
+    return {'message': 'Cars Recommender ML API for Maurel'}
 
 """
 
